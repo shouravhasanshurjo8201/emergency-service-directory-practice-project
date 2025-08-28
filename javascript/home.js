@@ -2,7 +2,6 @@
 let heartIconClick = Number(document.getElementById("heart-count").innerText);
 let copyButtonClick = Number(document.getElementById("Copy-count").innerText);
 let coinIconCount = Number(document.getElementById("coin-count").innerText);
-// let coinIconCount = 10;
 
 document.getElementById("Emergency-Hotline-Section").addEventListener("click", function(Event){
     // Heart Icons Functionality start
@@ -64,7 +63,7 @@ document.getElementById("Emergency-Hotline-Section").addEventListener("click", f
             let time = hours + ":" + sss(minutes) + ":" + sss(seconds) + " " + amPm;
             alert(helplineName + "\n" + "📞 Calling..." + '  ' +  helplineNumber);
             
-            const Section = document.getElementById("History-Section");
+            const Section = document.getElementById("History-Section-Div");
             const sectionDive = document.createElement("div");
             sectionDive.innerHTML = `
             <div class="bg-gray-100 m-2 p-3 rounded-md flex justify-between items-center">
@@ -85,3 +84,13 @@ document.getElementById("Emergency-Hotline-Section").addEventListener("click", f
     // Call Buttons Functionality End
 
 })
+
+// Clear Buttons Functionality start
+document.getElementById("Clear-button").addEventListener("click", function(){
+    const Section = document.getElementById("History-Section-Div");
+    Section.innerHTML = "";
+
+    document.getElementById("coin-count").innerText = 100;
+    coinIconCount = 100;
+})
+// Clear Buttons Functionality End
