@@ -1,13 +1,13 @@
 
-let heartIconClick = Number(document.getElementById("heart-count").innerText);
-let copyButtonClick = Number(document.getElementById("Copy-count").innerText);
+let heartIconCount = Number(document.getElementById("heart-count").innerText);
+let copyTextCount = Number(document.getElementById("Copy-count").innerText);
 let coinIconCount = Number(document.getElementById("coin-count").innerText);
 
 document.getElementById("Emergency-Hotline-Section").addEventListener("click", function(Event){
     // Heart Icons Functionality start
     if(Event.target.classList.contains("heart-icon")){
-        heartIconClick = heartIconClick + 1;
-        document.getElementById("heart-count").innerText = heartIconClick;
+        heartIconCount = heartIconCount + 1;
+        document.getElementById("heart-count").innerText = heartIconCount;
 
         Event.target.style.color = "red";
         Event.target.style.opacity = "60%";
@@ -16,8 +16,8 @@ document.getElementById("Emergency-Hotline-Section").addEventListener("click", f
 
     // Copy Buttons Functionality start
     if(Event.target.classList.contains("Copy-button")){
-        copyButtonClick = copyButtonClick + 1;
-        document.getElementById("Copy-count").innerText = copyButtonClick;
+        copyTextCount = copyTextCount + 1;
+        document.getElementById("Copy-count").innerText = copyTextCount;
 
         const card = Event.target.closest(".Hotline-card");
         const helplineNumber = card.querySelector(".Helpline-Number").innerText;
@@ -82,7 +82,6 @@ document.getElementById("Emergency-Hotline-Section").addEventListener("click", f
         }
     }
     // Call Buttons Functionality End
-
 })
 
 // Clear Buttons Functionality start
